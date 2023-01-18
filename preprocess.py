@@ -24,4 +24,5 @@ if __name__ == "__main__":
    data.set_index('Timestamp', inplace=True)
    data = data.groupby(data.index.floor('d')).mean()    # average electrical usage by days
    data = data[data.columns[[0,6,11,1,2,5,8,9,3,4,7,10,12]]]  # re-arrange to building types
+   data = remove_outliers(data, 50)   # remove huge outliers
    data.to_csv("Data/Electrical_Averaged.csv")   # save processed data
