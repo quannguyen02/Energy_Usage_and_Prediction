@@ -11,7 +11,7 @@ map_data = pd.DataFrame(
 st.map(map_data)
 
 #2
-x = st.slider('x')  # 👈 this is a widget
+x = st.slider('x', 10, 20)  # 👈 this is a widget
 st.write(x, 'squared is', x * x)
 
 #3
