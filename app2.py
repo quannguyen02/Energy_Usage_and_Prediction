@@ -5,7 +5,6 @@ from PIL import Image
 
 st.sidebar.markdown("## Select data to visualize")
 
-
 # Add a selectbox to the sidebar:
 side1_selectbox = st.sidebar.selectbox(
     'Show data by:',
@@ -31,6 +30,6 @@ else:
       'Choose Building Type',
       ('Academic Buildings', 'North Residence Halls', 'South Residence Hall')
    )
-   if side2_selectbox("Academic Buildings"):
+   # if side2_selectbox("Academic Buildings"):
       
    
