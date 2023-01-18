@@ -1,5 +1,7 @@
 import streamlit as st 
 import pandas as pd, matplotlib as plt
+from PIL import Image
+
 
 st.sidebar.markdown("## Select data to visualize")
 
