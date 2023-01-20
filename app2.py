@@ -35,11 +35,11 @@ else:
    
    side3_selectbox = st.sidebar.multiselect(
       'Choose North Residence Halls',
-      ['Asia House', 'East', 'Kahn', 'North']
+      ['Asia House', 'East', 'Kahn', 'North', 'Noah']
    )
    side4_selectbox = st.sidebar.multiselect(
       'Choose South Residence Halls',
-      ['Fairchild', 'Harvey', 'Lord', 'Saunders', 'Talcott']
+      ['Fairchild', 'Harvey', 'Lord-Saunders', 'Talcott']
    )
    for box in [side2_selectbox, side3_selectbox, side4_selectbox]:
       for building in box:
