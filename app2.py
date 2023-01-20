@@ -1,15 +1,24 @@
 import streamlit as st 
 import pandas as pd, matplotlib as plt
 from PIL import Image
+import os
+
+@st.cache
+# find the file
+def find(name, path):
+    for file in os.listdir(path):
+        if name in file:
+            return path + file
+
 
 st.set_page_config(layout="wide")
-st.sidebar.markdown("## Select data to visualize")
+st.sidebar.markdown("# Select data to visualize")
 
 # Add a selectbox to the sidebar:
 side1_selectbox = st.sidebar.selectbox(
     'Show data by:',
     ('Year', 'Buildings')
-)
+) 
 
 if side1_selectbox == 'Year':
    # multiselect_year = st.sidebar.multiselect("Choose Year(s) to display", range(2013,2023))
@@ -19,13 +28,6 @@ if side1_selectbox == 'Year':
    
    image = Image.open(f'./Graphs/Year/{side1_slider}_Electrical.png')
    st.image(image, use_column_width = True)
-   # uploadfile = st.file_uploader("Choose image", type="png")
-   # if uploadFile is not None:
-   #    img = load_image(uploadFile)
-   #    st.image(img)
-   #    st.write("Image Uploaded Successfully")
-   # else:
-   #    st.write("Make sure you image is in JPG/PNG Format.")
    
 else:
    side2_selectbox = st.sidebar.multiselect(
@@ -43,7 +45,7 @@ else:
    )
    for box in [side2_selectbox, side3_selectbox, side4_selectbox]:
       for building in box:
-         image = Image.open(f'./Graphs/Building_copy/{building}.png')
+         image = Image.open(find(building, './Graphs/Building/'))
          st.image(image)
    
    
