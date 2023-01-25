@@ -1,10 +1,7 @@
 streamlit
-gwosc
-gwpy
 matplotlib
-astropy
 numpy
 scipy
 pandas
-# tensorflow
-# scikit-learn
+tensorflow
+scikit-learn
