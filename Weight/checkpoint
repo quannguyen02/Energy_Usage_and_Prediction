@@ -1,0 +1,2 @@
+model_checkpoint_path: "weight_5in_1_out"
+all_model_checkpoint_paths: "weight_5in_1_out"
