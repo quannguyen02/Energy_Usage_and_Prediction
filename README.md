@@ -1,4 +1,4 @@
-# projecttemplate
+# Project Template
 
 Group Members: Quan Nguyen, Emma Lee
 
