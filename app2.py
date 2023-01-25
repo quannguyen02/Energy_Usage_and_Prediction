@@ -20,6 +20,9 @@ side1_selectbox = st.sidebar.selectbox(
     ('Year', 'Buildings')
 ) 
 
+
+
+
 if side1_selectbox == 'Year':
    # multiselect_year = st.sidebar.multiselect("Choose Year(s) to display", range(2013,2023))
    
@@ -51,6 +54,12 @@ if side1_selectbox == 'Year':
       st.write("In the year 2022,\n\n Electricity usage overall is most from feburary to june and august to december since that is the period students are on campus the most in my perspective. Electricity usage in Kahn and Science Center loos similar throught=out the whole year with a peak in May in Science Center. There is missing data for the whol fall semester time in North and Noah seems to be slightly off trend since electricity usage from september to december is not too differentiable from summer.")
 
 else:
+   side2_selectbox = st.sidebar.selectbox("Show prediction for 2023?", ('No', 'Yes'))
+   if side2_selectbox == 'No':
+      path = './Graphs/Building/'
+   else: 
+      path = './Graphs/Building_Predict/'
+
    side2_selectbox = st.sidebar.multiselect(
       'Choose Academic Buildings',
       ['Adam Joseph Lewis Center', 'Kohl Building', 'Science Center']
@@ -66,7 +75,7 @@ else:
    )
    for box in [side2_selectbox, side3_selectbox, side4_selectbox]:
       for building in box:
-         image = Image.open(find(building, './Graphs/Building/'))
+         image = Image.open(find(building, path))
          st.image(image)
    
    
