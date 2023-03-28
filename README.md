@@ -17,3 +17,13 @@ Data: contains raw energy data and preprocessed data
 
 Graphs: contains visualization plots
 Weight and training_1: contains information on the LSTM model
+
+Get the requirements:
+```
+pip3 install -r requirements.txt
+```
+
+Run the website application:
+```
+streamlit run app.py
+```
