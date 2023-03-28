@@ -1,2 +1,2 @@
-model_checkpoint_path: "checkpoint__5in_1_out"
-all_model_checkpoint_paths: "checkpoint__5in_1_out"
+model_checkpoint_path: "checkpoint__30in_1_out"
+all_model_checkpoint_paths: "checkpoint__30in_1_out"

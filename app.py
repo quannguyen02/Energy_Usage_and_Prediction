@@ -21,8 +21,6 @@ side1_selectbox = st.sidebar.selectbox(
 ) 
 
 
-
-
 if side1_selectbox == 'Year':
    # multiselect_year = st.sidebar.multiselect("Choose Year(s) to display", range(2013,2023))
    
