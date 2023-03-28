@@ -27,3 +27,5 @@ Run the website application:
 ```
 streamlit run app.py
 ```
+Website access:
+https://quannguyen02-energy-usage-and-prediction-app-xgz43y.streamlit.app/
