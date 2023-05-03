@@ -7,16 +7,12 @@ Electricity Data for Oberlin College's Dorms and Buildings collected from Oberli
 Preprocess.py: preprocess 10 years of collected data by days and statistically removed outliers.
 
 MakePlots.ipynb: 
-
     - Categorize data to their corresponding building types, including South and North Dorms and Academic Buildings.
-    
     - Plot visualization by building types and years.
 Train&Predict.ipynb: 
-
     - Train and predict 2023-2024 trend for energy usage using Long Short-Term Memory Model and plot the result.
     
 app.py:
-
     - Create a website using Streamlit to display the visualizations and predictions.
 
 Data: contains raw energy data and preprocessed data
